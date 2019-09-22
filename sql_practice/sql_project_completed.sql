@@ -54,12 +54,14 @@ Return the facid, facility name, member cost, and monthly maintenance of the
 facilities in question. */
 
 SELECT 
+    facid,
     name, 
-    membercost 
+    membercost, 
+    monthlymaintenance 
 FROM 
     Facilities
 WHERE 
-    membercost < (0.2 * membercost)
+    membercost < (0.2 * monthlymaintenance)
 
 
 
